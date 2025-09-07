@@ -17,9 +17,10 @@ def is_anagram(s, t):
     for i in range(len(s)):
             countS[s[i]] = 1 + countS.get(s[i], 0)
             countT[t[i]] = 1 + countT.get(t[i], 0)
+    return countS == countT
     
 # Time & Space Complexity
-# Time complexity: O(n+m)
+# Time complexity: O(n)
 # Space complexity: O(1)
 
 
@@ -43,7 +44,10 @@ def is_anagram(s, t):
 
 # Time & Space Complexity
 # Time complexity: O(n)
-# Space complexity: O(k)(k is the number of unique characters, ≤ 26 for lowercase English letters)
+# Space complexity: 
+# O(1) if the alphabet is fixed (e.g., lowercase English letters).
+# O(k) if the alphabet is unbounded (depends on unique characters in input).
 
        
 print(is_anagram("rat", "car"))
+print(is_anagram("anagram", "nagaram"))
