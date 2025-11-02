@@ -25,4 +25,4 @@ print(longest_consecutive([1,0,1,2]))
 
 # Time & Space Complexity
 # Time complexity: O(n)
-# Space complexity: O(1)
+# Space complexity: O(n)
